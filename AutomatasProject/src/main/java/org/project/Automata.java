@@ -148,22 +148,19 @@ public class Automata {
     }
 
     public void qHora() {
-        // Verificamos que el primer carácter sea 'c'
         if (cont < car.length && car[cont] == 'l') {
-            cont++; // Avanzamos para el prefijo 'cl'
-            // Verificamos la primera parte de la hora (NN)
+            cont++;
             if (cont < car.length && Character.isDigit(car[cont])) {
-                cont++; // Avanzamos al siguiente carácter
+                cont++;
                 if (cont < car.length && Character.isDigit(car[cont])) {
-                    cont++; // Avanzamos al siguiente carácter
+                    cont++;
                     if (cont < car.length && car[cont] == ':') {
-                        cont++; // Avanzamos al ':'
-                        // Verificamos la segunda parte de la hora (NN)
+                        cont++;
                         if (cont < car.length && Character.isDigit(car[cont])) {
-                            cont++; // Avanzamos al siguiente carácter
+                            cont++;
                             if (cont < car.length && Character.isDigit(car[cont])) {
-                                cont++; // Avanzamos al siguiente carácter
-                                aceptado = true; // Marcamos como aceptado
+                                cont++;
+                                aceptado = true;
                                 System.out.println("Token reconocido: Hora");
                             } else {
                                 System.out.println("Token no reconocido: formato de hora incorrecto");
